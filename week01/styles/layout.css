@@ -93,11 +93,25 @@ footer {
 }
 
 #main-content {
+    display: inline;
     margin: 0px;
     grid-column: 1/2;
     grid-row: 1/3;
     background-color: rgb(175, 230, 123);
     padding: 10px;
+    text-align: left;
+    align-items: top;
+
+}
+
+#main-content p {
+    padding-top: 30px;
+    padding: 10%;
+}
+
+#main-content h3 {
+    padding-top: 10px;
+    text-align: center;
 }
 
 #aside-content {
@@ -106,4 +120,12 @@ footer {
     grid-row: 1/3;
     background-color: rgb(233, 255, 156);
     padding: 10px;
+}
+
+#aside-content img {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+
 }
