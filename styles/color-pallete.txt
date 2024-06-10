@@ -1,0 +1,5 @@
+#34252F dark purply black
+#519872 dull green
+#81A7C5 overcast sea
+#FFF1D0 tan cream
+#FCF7F8 snow
