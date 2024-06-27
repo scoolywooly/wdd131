@@ -1,9 +1,15 @@
 <main>
     <div class="hero">
         <picture>
-            <source srcset="images/hong-kong-temple-large.webp" media="min-width: 1000px">
-            <source srcset=images/hero-medium.webp" media="min-width: 550px">
-            <img src="images/hero-small.webp" alt="Hong Kong Temple" width="500" hieght="250">
+            <source srcset="images/hong-kong-temple-large.webp" media="(min-width: 1000px)">
+            <source srcset="images/hong-kong-temple-meduim.webp" media="(min-width: 550px)">
+            <img src="images/hong-kong-temple-small.webp" alt="Hong Kong Temple" width="500" height="250">
         </picture>
     </div>
 </main>
+<style>
+    .hero img {
+        width: 100%;
+        height: auto;
+    }
+</style>
