@@ -1,0 +1,111 @@
+:root {
+    --red: #ca1919;
+    --blue: rgb(30, 22, 135);
+}
+
+
+* {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+
+}
+
+header {
+    background-color: var(--red);
+    color: white;
+    text-align: center;
+    padding: 2em;
+    border-color: white;
+    border-bottom: 0.75em solid;
+}
+
+#desktop-bg-picture {
+    display: none;
+}
+
+/*Desktop CSS (if the screen is wider than 500 pixels)*/
+@media only screen and (min-width: 501px) {
+
+    body {
+        margin: 0px;
+    }
+
+    body main {
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+
+    header {
+        background-color: var(--red);
+        color: white;
+        text-align: center;
+        padding: 2em;
+        border-color: white;
+        border-bottom: 0.75em solid;
+        position: sticky;
+        z-index: 1;
+        margin: 0;
+    }
+
+
+
+
+    .card {
+        display: flex;
+        background-color: white;
+        color: var(--blue);
+        border: 1em solid var(--red);
+        max-width: 20vw;
+
+        flex-direction: column;
+        z-index: 1;
+
+    }
+
+    .card label {
+        width: 100px;
+        flex-direction: row;
+        margin-right: 10px;
+    }
+
+    .card #content {
+
+        width: 100%;
+        max-height: fit-content;
+        position: absolute;
+        margin: 0;
+
+
+
+    }
+
+    #data-card {
+        position: inherit;
+
+        top: 1em;
+        left: 1em;
+    }
+
+    #weather-card {
+        position: inherit;
+        top: 10em;
+        right: 1em;
+    }
+
+    #desktop-bg-picture {
+        margin: 0;
+        top: 0px;
+        left: 0px;
+        padding: 0px;
+        border: none;
+        display: grid;
+        z-index: 0;
+        position: absolute;
+
+    }
+
+    #default-bg-picture {
+        display: none;
+    }
+}
