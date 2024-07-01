@@ -7,6 +7,7 @@
 * {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     margin: 0;
+    height: fit-content;
 
 }
 
@@ -19,22 +20,76 @@ header {
     border-bottom: 0.75em solid;
 }
 
+main {
+    height: fit-content;
+}
+
+footer {
+
+    background-color: var(--red);
+    position: absolute;
+    top: 882px;
+    min-height: 115px;
+    width: 100%;
+    justify-items: center;
+}
+
+
+footer p {
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+.card {
+    z-index: 1;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    border: 10px solid var(--blue);
+    width: 230px;
+}
+
+.card h2 {
+    padding: 5px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 1em;
+
+}
+
+#weather-card {
+    height: fit-content;
+    width: auto;
+}
+
 #desktop-bg-picture {
     display: none;
 }
 
+
+
 /*Desktop CSS (if the screen is wider than 500 pixels)*/
 @media only screen and (min-width: 501px) {
+
+    body,
+    html {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
 
     body {
         margin: 0px;
     }
 
-    body main {
-        display: block;
-        height: 100%;
-        width: 100%;
-    }
+
 
     header {
         background-color: var(--red);
@@ -48,60 +103,38 @@ header {
         margin: 0;
     }
 
-
-
-
-    .card {
-        display: flex;
-        background-color: white;
-        color: var(--blue);
-        border: 1em solid var(--red);
-        max-width: 20vw;
-
-        flex-direction: column;
-        z-index: 1;
-
-    }
-
-    .card label {
-        width: 100px;
-        flex-direction: row;
-        margin-right: 10px;
-    }
-
-    .card #content {
-
-        width: 100%;
-        max-height: fit-content;
-        position: absolute;
-        margin: 0;
-
-
-
+    main {
+        display: grid;
+        grid-template-columns: 1em 1fr 2fr 1fr 1em;
+        grid-template-rows: 1fr 1fr;
     }
 
     #data-card {
-        position: inherit;
-
-        top: 1em;
-        left: 1em;
+        grid-column: 2/3;
+        grid-row: 1/2;
     }
 
     #weather-card {
-        position: inherit;
-        top: 10em;
-        right: 1em;
+        grid-column: 4/5;
+        width: fit-content;
+        grid-row-start: 2;
     }
 
+
     #desktop-bg-picture {
+        background-position: center;
         margin: 0;
         top: 0px;
         left: 0px;
         padding: 0px;
         border: none;
-        display: grid;
+        display: flex;
+        align-self: center;
         z-index: 0;
         position: absolute;
+        object-fit: cover;
+        object-position: center;
+
 
     }
 

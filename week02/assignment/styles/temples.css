@@ -22,7 +22,7 @@ h2 {
     margin: auto;
     text-align: center;
 
-    padding: auto;
+
 }
 
 main {
@@ -61,7 +61,7 @@ main {
 }
 
 #ham-icon {
-    size: 1.5em;
+    resize: 1.5em;
     display: none;
     position: fixed;
     top: 10px;
