@@ -61,7 +61,7 @@ main {
 }
 
 #ham-icon {
-    resize: 1.5em;
+    size: 1.5em;
     display: none;
     position: fixed;
     top: 10px;
