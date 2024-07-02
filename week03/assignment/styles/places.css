@@ -16,24 +16,60 @@ header {
     color: white;
     text-align: center;
     padding: 2em;
-    border-color: white;
+    border-color: var(--blue);
     border-bottom: 0.75em solid;
 }
+
+
+
 
 main {
     height: fit-content;
 }
 
-footer {
 
-    background-color: var(--red);
-    position: absolute;
-    top: 882px;
-    min-height: 115px;
-    width: 100%;
-    justify-items: center;
+
+.card {
+    border-bottom: 5px double var(--blue);
+    margin: 0 auto;
+    display: block;
+    padding: 1em;
+    background-color: white;
+    text-align: center;
+
 }
 
+.card h2 {
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.card img {
+    padding: 5px;
+}
+
+.text-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 5px;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+
+}
+
+footer {
+    background-color: var(--red);
+    height: auto;
+    min-height: 160px;
+    text-align: center;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
 
 footer p {
     color: white;
@@ -44,30 +80,8 @@ footer p {
 
 }
 
-.card {
-    z-index: 1;
-    background-color: white;
-    display: flex;
-    flex-direction: column;
-    border: 10px solid var(--blue);
-    width: 230px;
-}
 
-.card h2 {
-    padding: 5px;
-}
 
-.text-wrapper {
-    display: flex;
-    flex-direction: row;
-    padding: 1em;
-
-}
-
-#weather-card {
-    height: fit-content;
-    width: auto;
-}
 
 #desktop-bg-picture {
     display: none;
@@ -96,7 +110,7 @@ footer p {
         color: white;
         text-align: center;
         padding: 2em;
-        border-color: white;
+        border-color: var(--blue);
         border-bottom: 0.75em solid;
         position: sticky;
         z-index: 1;
@@ -106,18 +120,58 @@ footer p {
     main {
         display: grid;
         grid-template-columns: 1em 1fr 2fr 1fr 1em;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1em 1fr 1fr 1em;
+
     }
+
+    .card {
+        z-index: 1;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column;
+        border: 10px solid var(--blue);
+        width: 230px;
+        display: grid;
+        justify-content: left;
+    }
+
+    .card h2 {
+        padding: 3px;
+        background: white;
+        padding: 8px;
+        margin-top: -30px;
+        margin-left: -30px;
+    }
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: row;
+        padding: 5px;
+        font-weight: bold;
+        justify-content: left;
+
+    }
+
+
 
     #data-card {
         grid-column: 2/3;
-        grid-row: 1/2;
+        grid-row: 2/3;
+        width: auto;
     }
 
     #weather-card {
         grid-column: 4/5;
-        width: fit-content;
-        grid-row-start: 2;
+        width: 205px;
+        grid-row-start: 3;
+        height: fit-content;
+        grid-row-end: 4;
+    }
+
+    h2::first-letter {
+        font-size: larger;
+        color: var(--blue);
+        font-weight: bolder;
     }
 
 
@@ -140,5 +194,17 @@ footer p {
 
     #default-bg-picture {
         display: none;
+    }
+
+    footer {
+
+        background-color: var(--red);
+        position: absolute;
+        top: 882px;
+        min-height: 160px;
+        color: white;
+        width: 100%;
+        justify-items: center;
+        align-items: center;
     }
 }
