@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("currentyear").innerHTML = copyrightYear;
     document.getElementById("lastModified").innerHTML = "Last Modified: " + document.lastModified;
     document.getElementById("temp-p").textContent = fakeTempature + "°F";
-    document.getElementById("wind-p").textContent = Math.fakeWindSpeed + "mph";
+    document.getElementById("wind-p").textContent = fakeWindSpeed + "mph";
 
     // Get the wind chill IF temp < 50 degrees F or 10 degrees C (if you don't like freedom)
     function calculateWindChill(temp, windSpeed) {
