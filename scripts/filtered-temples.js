@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
             // OLD
         } else if (condition == "Old") {
 
-            oldTemples = temples.filter(temple => temple.dedicated.contains("1900"));
+            oldTemples = temples.filter(temple => temple.dedicated.contains("1900")); // this is where i will write the filter for old tempeles
         }
 
     }
