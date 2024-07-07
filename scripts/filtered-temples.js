@@ -86,50 +86,66 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // create a card each ittereation of the loop
 
-    temples.forEach(function (temple) {
-        const card = document.createElement("div");
-        card.className = "card";
-        const heading = docuement.createElement("h3");
-        heading.textContent = temple.templeName;
-
-        const data = docuemnt.createElement("div");
-        data.className = "data-div";
-
-        const location = docuement.createElement("p");
-        location.className = "data-p";
-        location.textContent = `Location: ${temple.location}`;
-
-        const dedication = docuement.createElement("p");
-        dedication.className = "data-p";
-        dedication.textContent = `Dedication: ${temple.dedicated}`;
-
-        const size = docuement.createElement("p");
-        size.className = "data-p";
-        size.textContent = `Size: ${temple.area}`;
+    function makeArray(condition) {
 
 
-        const templePicture = docuement.createElement("img");
-        templePicture.className = "temple-pic";
-        templePicture.src = temple.imageUrl;
-        templePicture.alt = `Picture of the ${temple.name}`;
+        if (condition == "Home") {
+            temples.forEach(function (temple, index) {
+                const card = document.createElement("div");
+                card.className = "card";
+                const heading = document.createElement("h3");
+                heading.textContent = temple.templeName;
+
+                const data = document.createElement("div");
+                data.className = "data-div";
+
+                const location = document.createElement("p");
+                location.className = "data-p";
+                location.textContent = `Location: ${temple.location}`;
+
+                const dedication = document.createElement("p");
+                dedication.className = "data-p";
+                dedication.textContent = `Dedication: ${temple.dedicated}`;
+
+                const size = document.createElement("p");
+                size.className = "data-p";
+                size.textContent = `Size: ${temple.area}`;
+
+
+                const templePicture = document.createElement("img");
+                templePicture.className = "temple-pic";
+                templePicture.src = temple.imageUrl;
+                templePicture.alt = `Picture of the ${temple.name}`;
+                templePicture.loading = "lazy";
+
+
+                data.appendChild(location);
+                data.appendChild(dedication);
+                data.appendChild(size);
+
+                card.appendChild(heading);
+                card.appendChild(data);
+                card.appendChild(templePicture);
+
+                card.id = `temple${index}`;
+
+                const mainTag = document.querySelector("main");
+                mainTag.appendChild(card);
+
+
+            });
+
+            // OLD
+        } else if (condition == "Old") {
+
+            oldTemples = temples.filter(temple => temple.dedicated.contains("1900"));
+        }
+
+    }
 
 
 
-        data.appendChild(location);
-        data.appendChild(dedication);
-        data.appendChild(size);
-
-        card.appendChild(heading);
-        card.appendChild(data);
-        card.appendChild(templePicture);
-
-        const mainTag = docuement.querySelector("main");
-        mainTag.appendChild(card);
-
-
-    });
-
-
+    makeArray("Home");
 
 
     // get the full year and replace the html id "currentyear" with the actual year.
